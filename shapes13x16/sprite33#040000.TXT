@@ -1,1 +1,99 @@
-CloudBotR	Entry;; Sprite width = 16; Sprite height = 13;	php	sei	tsc	sta	>stackSave	lda	>$e1c068	ora	#$30	sta	>$e1c068	tya	clc	adc	#7	tcs	pea	$   0	pea	$   0	pea	$  f1	pea	$ffff	adc	#160	tcs	pea	$   0	pea	$   0	pea	$10ff	pea	$ffff	adc	#160	tcs	pea	$   0	pea	$   0	pea	$f1ff	pea	$ffff	adc	#160	tcs	pea	$   0	pea	$   0	pea	$10f1	pea	$ffff	adc	#160	tcs	pea	$   0	pea	$   0	pea	$  10	pea	$f11f	adc	#160	tcs	pea	$   0	pea	$   0	pea	$   0	pea	$1001	adc	#160	tcs	pea	$   0	pea	$   0	pea	$   0	pea	$   0	adc	#160	tcs	pea	$   0	pea	$   0	pea	$   0	pea	$   0	adc	#160	tcs	pea	$   0	pea	$   0	pea	$   0	pea	$   0	adc	#160	tcs	pea	$   0	pea	$   0	pea	$   0	pea	$   0	adc	#160	tcs	pea	$   0	pea	$   0	pea	$   0	pea	$   0	adc	#160	tcs	pea	$   0	pea	$   0	pea	$   0	pea	$   0	adc	#160	tcs	pea	$   0	pea	$   0	pea	$   0	pea	$   0	lda	>$e1c068	and	#$ffcf	sta	>$e1c068	lda	>stackSave	tcs	plp	rtl
+CloudBotR	Entry 
+;
+; Sprite width = 16
+; Sprite height = 13
+;
+	php
+	sei
+	tsc
+	sta	>stackSave
+	lda	>$e1c068
+	ora	#$30
+	sta	>$e1c068
+	tya
+	clc
+	adc	#7
+	tcs
+	pea	$   0
+	pea	$   0
+	pea	$  f1
+	pea	$ffff
+	adc	#160
+	tcs
+	pea	$   0
+	pea	$   0
+	pea	$10ff
+	pea	$ffff
+	adc	#160
+	tcs
+	pea	$   0
+	pea	$   0
+	pea	$f1ff
+	pea	$ffff
+	adc	#160
+	tcs
+	pea	$   0
+	pea	$   0
+	pea	$10f1
+	pea	$ffff
+	adc	#160
+	tcs
+	pea	$   0
+	pea	$   0
+	pea	$  10
+	pea	$f11f
+	adc	#160
+	tcs
+	pea	$   0
+	pea	$   0
+	pea	$   0
+	pea	$1001
+	adc	#160
+	tcs
+	pea	$   0
+	pea	$   0
+	pea	$   0
+	pea	$   0
+	adc	#160
+	tcs
+	pea	$   0
+	pea	$   0
+	pea	$   0
+	pea	$   0
+	adc	#160
+	tcs
+	pea	$   0
+	pea	$   0
+	pea	$   0
+	pea	$   0
+	adc	#160
+	tcs
+	pea	$   0
+	pea	$   0
+	pea	$   0
+	pea	$   0
+	adc	#160
+	tcs
+	pea	$   0
+	pea	$   0
+	pea	$   0
+	pea	$   0
+	adc	#160
+	tcs
+	pea	$   0
+	pea	$   0
+	pea	$   0
+	pea	$   0
+	adc	#160
+	tcs
+	pea	$   0
+	pea	$   0
+	pea	$   0
+	pea	$   0
+	lda	>$e1c068
+	and	#$ffcf
+	sta	>$e1c068
+	lda	>stackSave
+	tcs
+	plp
+	rtl

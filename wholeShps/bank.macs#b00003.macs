@@ -1,1 +1,7 @@
-	Macro&lab 	Mk4 	&Offset,&Mask,&Data	lda	|&Offset,y	and	#&Mask	ora	#&Data	sta	|&Offset,y         Mend
+	Macro
+&lab 	Mk4 	&Offset,&Mask,&Data
+	lda	|&Offset,y
+	and	#&Mask
+	ora	#&Data
+	sta	|&Offset,y
+         Mend

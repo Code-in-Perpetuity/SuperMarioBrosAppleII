@@ -1,2 +1,7 @@
 # Auto detect text files and perform LF normalization
 * text=auto
+
+# ASM files
+
+*.SRC linguist-language=Assembly
+*.macs linguist-language=Assembly

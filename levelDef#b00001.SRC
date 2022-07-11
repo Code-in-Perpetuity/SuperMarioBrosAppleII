@@ -1,1 +1,74 @@
-This is the official level format (v.2)Look in 'thoughts' for docs on v.1Level format:note - 	levels may be a max of 64K	The first segment reference (SegOff1) will be where the player	initially startsOffset		type	Identifier	Description-------------------------------------------------------------------------------HEADER:         String	"SMBIIGS"	Identifier string for a level file		CString			Level name i.e. "World 1-1"		word	Time		Time limit in BCD format		byte	NumSeg		Number of segments		word	SegOff1		Offset into file of first segment		word	SegOff2		Offset to second segment		.		.		.		word	SegOffN		Offset to Nth segment		byte	NumExtSeg	Number of external segment references		CString	ExtSeg1		filename of first external ref		CString	ExtSeg2		filename of second external ref		.		.		.		CString	ExtSegN		filename of Nth external refSEGMENT:        string	"SMBSEG"	Identifier string		word	BgndClr		Color of the "sky" (RGB)		word	SegWidth	Width of segment in blocks		word	PlayerX		Block where player begins		word	PlayerBase	Baseblock where the player begins		byte[32] Palette	Palette to be used for this seg.		word	NumBaddies	;number of enemy charaters		byte	ID1		;sprite ID		word	XPos1		;Position 0-(SegWidth)		byte	YPos1		;Position 0-12			byte	ID2		.		.		.		word	NumRef		Number of segment references		word	RefOff1		Blocknumber ofsegment ref		word	SegRef1		Segment to link to		word	DestHorz	Destination Block in segment		word	DestVert	Destination Vertical block		word	RefOff2		Blocknumber		word	SegRef2		Segment to link to		.		.		.		word	RefOffN		Blocknumber		word	SegRefN		segment to link to		data	LevelData	13*SegWidth bytes--------------------------------------------------------------------------------NOTE:	If a segment reference in a given segment is >0x00FF, then the low	order byte should be ignored and the high order byte used as an index	into the list of external references.ex.	RefNum 0x0300ExtRefList	"World11"		"World31"		"Bonus"		"World71"
+This is the official level format (v.2)
+
+Look in 'thoughts' for docs on v.1
+
+Level format:
+note - 	levels may be a max of 64K
+	The first segment reference (SegOff1) will be where the player
+	initially starts
+
+Offset		type	Identifier	Description
+-------------------------------------------------------------------------------
+HEADER:         String	"SMBIIGS"	Identifier string for a level file
+		CString			Level name i.e. "World 1-1"
+		word	Time		Time limit in BCD format
+		byte	NumSeg		Number of segments
+		word	SegOff1		Offset into file of first segment
+		word	SegOff2		Offset to second segment
+		.
+		.
+		.
+		word	SegOffN		Offset to Nth segment
+
+		byte	NumExtSeg	Number of external segment references
+		CString	ExtSeg1		filename of first external ref
+		CString	ExtSeg2		filename of second external ref
+		.
+		.
+		.
+		CString	ExtSegN		filename of Nth external ref
+
+SEGMENT:        string	"SMBSEG"	Identifier string
+		word	BgndClr		Color of the "sky" (RGB)
+		word	SegWidth	Width of segment in blocks
+		word	PlayerX		Block where player begins
+		word	PlayerBase	Baseblock where the player begins
+		byte[32] Palette	Palette to be used for this seg.
+
+		word	NumBaddies	;number of enemy charaters
+		byte	ID1		;sprite ID
+		word	XPos1		;Position 0-(SegWidth)
+		byte	YPos1		;Position 0-12
+	
+		byte	ID2
+		.
+		.
+		.
+
+		word	NumRef		Number of segment references
+		word	RefOff1		Blocknumber ofsegment ref
+		word	SegRef1		Segment to link to
+		word	DestHorz	Destination Block in segment
+		word	DestVert	Destination Vertical block
+
+		word	RefOff2		Blocknumber
+		word	SegRef2		Segment to link to
+		.
+		.
+		.
+		word	RefOffN		Blocknumber
+		word	SegRefN		segment to link to
+
+		data	LevelData	13*SegWidth bytes
+--------------------------------------------------------------------------------
+
+NOTE:	If a segment reference in a given segment is >0x00FF, then the low
+	order byte should be ignored and the high order byte used as an index
+	into the list of external references.
+
+ex.	RefNum 0x0300
+
+ExtRefList	"World11"
+		"World31"
+		"Bonus"
+		"World71"

@@ -1,1 +1,99 @@
-hillHCtr	Entry;; Sprite width = 16; Sprite height = 13;	php	sei	tsc	sta	>stackSave	lda	>$e1c068	ora	#$30	sta	>$e1c068	tya	clc	adc	#7	tcs	pea	$5555	pea	$5555	pea	$5555	pea	$5555	adc	#160	tcs	pea	$5551	pea	$5555	pea	$5555	pea	$5555	adc	#160	tcs	pea	$1511	pea	$5555	pea	$5555	pea	$5555	adc	#160	tcs	pea	$1511	pea	$1555	pea	$5555	pea	$5555	adc	#160	tcs	pea	$5551	pea	$1151	pea	$5555	pea	$5555	adc	#160	tcs	pea	$5555	pea	$1151	pea	$5555	pea	$5555	adc	#160	tcs	pea	$5555	pea	$1555	pea	$5555	pea	$5555	adc	#160	tcs	pea	$5555	pea	$5555	pea	$5555	pea	$5555	adc	#160	tcs	pea	$5555	pea	$5555	pea	$5555	pea	$5555	adc	#160	tcs	pea	$5555	pea	$5555	pea	$5555	pea	$5555	adc	#160	tcs	pea	$5555	pea	$5555	pea	$5555	pea	$5555	adc	#160	tcs	pea	$5555	pea	$5555	pea	$5555	pea	$5555	adc	#160	tcs	pea	$5555	pea	$5555	pea	$5555	pea	$5555	lda	>$e1c068	and	#$ffcf	sta	>$e1c068	lda	>stackSave	tcs	plp	rtl
+hillHCtr	Entry 
+;
+; Sprite width = 16
+; Sprite height = 13
+;
+	php
+	sei
+	tsc
+	sta	>stackSave
+	lda	>$e1c068
+	ora	#$30
+	sta	>$e1c068
+	tya
+	clc
+	adc	#7
+	tcs
+	pea	$5555
+	pea	$5555
+	pea	$5555
+	pea	$5555
+	adc	#160
+	tcs
+	pea	$5551
+	pea	$5555
+	pea	$5555
+	pea	$5555
+	adc	#160
+	tcs
+	pea	$1511
+	pea	$5555
+	pea	$5555
+	pea	$5555
+	adc	#160
+	tcs
+	pea	$1511
+	pea	$1555
+	pea	$5555
+	pea	$5555
+	adc	#160
+	tcs
+	pea	$5551
+	pea	$1151
+	pea	$5555
+	pea	$5555
+	adc	#160
+	tcs
+	pea	$5555
+	pea	$1151
+	pea	$5555
+	pea	$5555
+	adc	#160
+	tcs
+	pea	$5555
+	pea	$1555
+	pea	$5555
+	pea	$5555
+	adc	#160
+	tcs
+	pea	$5555
+	pea	$5555
+	pea	$5555
+	pea	$5555
+	adc	#160
+	tcs
+	pea	$5555
+	pea	$5555
+	pea	$5555
+	pea	$5555
+	adc	#160
+	tcs
+	pea	$5555
+	pea	$5555
+	pea	$5555
+	pea	$5555
+	adc	#160
+	tcs
+	pea	$5555
+	pea	$5555
+	pea	$5555
+	pea	$5555
+	adc	#160
+	tcs
+	pea	$5555
+	pea	$5555
+	pea	$5555
+	pea	$5555
+	adc	#160
+	tcs
+	pea	$5555
+	pea	$5555
+	pea	$5555
+	pea	$5555
+	lda	>$e1c068
+	and	#$ffcf
+	sta	>$e1c068
+	lda	>stackSave
+	tcs
+	plp
+	rtl

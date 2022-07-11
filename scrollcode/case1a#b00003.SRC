@@ -1,1 +1,142 @@
-	sei		;disable interrupts	tsc	sta	SP	;save the stackpointer	lda	SPdest	tcs	lda	>$E1C068	ora	#$30	sta	>$E1C068	ldx	<141	ldy	<139	lda	<137	pei	<143	phx	ldx	<135	phy	ldy	<133	pha	lda	<131	phx	ldx	<129	phy	ldy	<127	pha	lda	<125	phx	ldx	<123	phy	ldy	<121	pha	lda	<119	phx	ldx	<117	phy	ldy	<115	pha	lda	<113	phx	ldx	<111	phy	ldy	<109	pha	lda	<107	phx	ldx	<105	phy	ldy	<103	pha	lda	<101	phx	ldx	<99	phy	ldy	<97	pha	lda	<95	phx	ldx	<93	phy	ldy	<91	pha	lda	<89	phx	ldx	<87	phy	ldy	<85	pha	lda	<83	phx	ldx	<81	phy	ldy	<79	pha	lda	<77	phx	ldx	<75	phy	ldy	<73	pha	lda	<71	phx	ldx	<69	phy	ldy	<67	pha	lda	<65	phx	ldx	<63	phy	ldy	<61	pha	lda	<59	phx	ldx	<57	phy	ldy	<55	pha	lda	<53	phx	ldx	<51	phy	ldy	<49	pha	lda	<47	phx	ldx	<45	phy	ldy	<43	pha	lda	<41	phx	ldx	<39	phy	ldy	<37	pha	lda	<35	phx	ldx	<33	phy	ldy	<31	pha	lda	<29	phx	ldx	<27	phy	ldy	<25	pha	lda	<23	phx	ldx	<21	phy	ldy	<19	pha	lda	<17	phx	phy	pha	lda	>$E1C068	and	#$FFCF	sta	>$E1C068	lda	SP	tcs		;restore SP	cli	rts
+	sei		;disable interrupts
+	tsc
+	sta	SP	;save the stackpointer
+	lda	SPdest
+	tcs
+	lda	>$E1C068
+	ora	#$30
+	sta	>$E1C068
+	ldx	<141
+	ldy	<139
+	lda	<137
+	pei	<143
+	phx
+	ldx	<135
+	phy
+	ldy	<133
+	pha
+	lda	<131
+	phx
+	ldx	<129
+	phy
+	ldy	<127
+	pha
+	lda	<125
+	phx
+	ldx	<123
+	phy
+	ldy	<121
+	pha
+	lda	<119
+	phx
+	ldx	<117
+	phy
+	ldy	<115
+	pha
+	lda	<113
+	phx
+	ldx	<111
+	phy
+	ldy	<109
+	pha
+	lda	<107
+	phx
+	ldx	<105
+	phy
+	ldy	<103
+	pha
+	lda	<101
+	phx
+	ldx	<99
+	phy
+	ldy	<97
+	pha
+	lda	<95
+	phx
+	ldx	<93
+	phy
+	ldy	<91
+	pha
+	lda	<89
+	phx
+	ldx	<87
+	phy
+	ldy	<85
+	pha
+	lda	<83
+	phx
+	ldx	<81
+	phy
+	ldy	<79
+	pha
+	lda	<77
+	phx
+	ldx	<75
+	phy
+	ldy	<73
+	pha
+	lda	<71
+	phx
+	ldx	<69
+	phy
+	ldy	<67
+	pha
+	lda	<65
+	phx
+	ldx	<63
+	phy
+	ldy	<61
+	pha
+	lda	<59
+	phx
+	ldx	<57
+	phy
+	ldy	<55
+	pha
+	lda	<53
+	phx
+	ldx	<51
+	phy
+	ldy	<49
+	pha
+	lda	<47
+	phx
+	ldx	<45
+	phy
+	ldy	<43
+	pha
+	lda	<41
+	phx
+	ldx	<39
+	phy
+	ldy	<37
+	pha
+	lda	<35
+	phx
+	ldx	<33
+	phy
+	ldy	<31
+	pha
+	lda	<29
+	phx
+	ldx	<27
+	phy
+	ldy	<25
+	pha
+	lda	<23
+	phx
+	ldx	<21
+	phy
+	ldy	<19
+	pha
+	lda	<17
+	phx
+	phy
+	pha
+	lda	>$E1C068
+	and	#$FFCF
+	sta	>$E1C068
+	lda	SP
+	tcs		;restore SP
+	cli
+	rts

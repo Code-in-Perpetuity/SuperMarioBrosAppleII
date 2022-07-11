@@ -1,1 +1,99 @@
-QBlock	Entry;; Sprite width = 16; Sprite height = 13;	php	sei	tsc	sta	>stackSave	lda	>$e1c068	ora	#$30	sta	>$e1c068	tya	clc	adc	#7	tcs	pea	$1111	pea	$1111	pea	$1111	pea	$1111	adc	#160	tcs	pea	$3133	pea	$3333	pea	$3333	pea	$3313	adc	#160	tcs	pea	$3133	pea	$3393	pea	$9933	pea	$3313	adc	#160	tcs	pea	$3133	pea	$3319	pea	$1139	pea	$3313	adc	#160	tcs	pea	$3133	pea	$1339	pea	$1339	pea	$3313	adc	#160	tcs	pea	$3133	pea	$1399	pea	$1331	pea	$3313	adc	#160	tcs	pea	$3133	pea	$1311	pea	$3933	pea	$3313	adc	#160	tcs	pea	$3133	pea	$3313	pea	$3133	pea	$3313	adc	#160	tcs	pea	$3133	pea	$3333	pea	$3333	pea	$3313	adc	#160	tcs	pea	$3133	pea	$3393	pea	$3933	pea	$3313	adc	#160	tcs	pea	$3133	pea	$3313	pea	$3133	pea	$3313	adc	#160	tcs	pea	$3133	pea	$3333	pea	$3333	pea	$3313	adc	#160	tcs	pea	$1111	pea	$1111	pea	$1111	pea	$1111	lda	>$e1c068	and	#$ffcf	sta	>$e1c068	lda	>stackSave	tcs	plp	rtl
+QBlock	Entry
+;
+; Sprite width = 16
+; Sprite height = 13 
+;
+	php
+	sei
+	tsc
+	sta	>stackSave
+	lda	>$e1c068
+	ora	#$30
+	sta	>$e1c068
+	tya
+	clc
+	adc	#7
+	tcs
+	pea	$1111
+	pea	$1111
+	pea	$1111
+	pea	$1111
+	adc	#160
+	tcs
+	pea	$3133
+	pea	$3333
+	pea	$3333
+	pea	$3313
+	adc	#160
+	tcs
+	pea	$3133
+	pea	$3393
+	pea	$9933
+	pea	$3313
+	adc	#160
+	tcs
+	pea	$3133
+	pea	$3319
+	pea	$1139
+	pea	$3313
+	adc	#160
+	tcs
+	pea	$3133
+	pea	$1339
+	pea	$1339
+	pea	$3313
+	adc	#160
+	tcs
+	pea	$3133
+	pea	$1399
+	pea	$1331
+	pea	$3313
+	adc	#160
+	tcs
+	pea	$3133
+	pea	$1311
+	pea	$3933
+	pea	$3313
+	adc	#160
+	tcs
+	pea	$3133
+	pea	$3313
+	pea	$3133
+	pea	$3313
+	adc	#160
+	tcs
+	pea	$3133
+	pea	$3333
+	pea	$3333
+	pea	$3313
+	adc	#160
+	tcs
+	pea	$3133
+	pea	$3393
+	pea	$3933
+	pea	$3313
+	adc	#160
+	tcs
+	pea	$3133
+	pea	$3313
+	pea	$3133
+	pea	$3313
+	adc	#160
+	tcs
+	pea	$3133
+	pea	$3333
+	pea	$3333
+	pea	$3313
+	adc	#160
+	tcs
+	pea	$1111
+	pea	$1111
+	pea	$1111
+	pea	$1111
+	lda	>$e1c068
+	and	#$ffcf
+	sta	>$e1c068
+	lda	>stackSave
+	tcs
+	plp
+	rtl
