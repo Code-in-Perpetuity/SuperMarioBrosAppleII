@@ -1,6 +1,6 @@
 # Super Mario Bros. Apple IIgs
 
- The source code behind an old bootleg Mario game for the Apple II, created by Lucas Scharenbroich in 1998 as an educational experience. In other words, the code is NOT mine and I do not take any kind of credit for it.
+ The source code behind an old bootleg Mario game for the Apple II, created by Lucas Scharenbroich in 1998 as an educational experience. In other words, the code is NOT mine and I do not take any kind of credit for it. The source code appears to be somewhat incomplete, as not all header files are present.
 
  The source code behind this game is freely available for download on [this online mirror](https://mirrors.apple2.org.za/apple.cabi.net/Demos/SMB.GS.STUFF/) ([Lucas's personal website](https://iigs.dreamhosters.com/smb/smb.html) claims to host the source code as free download, but the archive there doesn't appear to actually contain it. It does, however, comprise data files and audio among other goodies), where they are stored in the file `smb.src.shk`. A `.shk` file is a special type of compressed archive for the Apple II created by the program _ShrinkIt!_. Conventional unzippers, like WinRAR and 7-Zip, are unable to open such archives, so I used the program [CiderPress](https://a2ciderpress.com/) instead, which is specifically tailored towards Apple II file management.
 
