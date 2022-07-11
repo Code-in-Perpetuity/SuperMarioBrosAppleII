@@ -5,3 +5,4 @@
 
 *.SRC linguist-language=Assembly
 *.macs linguist-language=Assembly
+*.TXT linguist-language=Assembly
